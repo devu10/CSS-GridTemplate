@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.container div {
+  background: rgba(201, 9, 9, 0.767);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  height: 100vh;
+  color: white;
+
+  display: grid;
+  gap: 10px;
+}
+/* Tablets sc < 992 px */
+
+/* Phones sc < 550 px */
