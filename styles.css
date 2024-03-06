@@ -2,21 +2,104 @@ body {
   margin: 0;
 }
 
-.container div {
-  background: rgba(201, 9, 9, 0.767);
+* {
+  box-sizing: border-box;
+}
+
+.container > * {
   display: grid;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .container {
-  background: white;
-  height: 100vh;
-  color: white;
-
   display: grid;
-  gap: 10px;
+  gap: 5px;
+  grid-template-areas:
+    "h1 h1 h1"
+    "header header header"
+    "banner banner o1"
+    "banner banner o2"
+    "side main main"
+    "r main main"
+    "t main main"
+    "f f f";
 }
-/* Tablets sc < 992 px */
+h1 {
+  background-color: blue;
+  color: white;
+  grid-area: h1;
+}
+header {
+  background: brown;
+  color: white;
+  grid-area: header;
+}
 
+.banner {
+  background: linear-gradient(135deg, red, blue);
+  min-height: 20vh;
+  grid-area: banner;
+}
+.off1 {
+  background: yellow;
+  grid-area: o1;
+}
+.off2 {
+  background: green;
+  grid-area: o2;
+}
+.side-menu {
+  background: skyblue;
+  grid-area: side;
+}
+.recent {
+  background: greenyellow;
+  grid-area: r;
+}
+.tags {
+  background: rebeccapurple;
+  grid-area: t;
+}
+.main {
+  height: 30vh;
+  background: radial-gradient(purple, red, green);
+  grid-area: main;
+}
+footer {
+  background: black;
+  color: white;
+  grid-area: f;
+}
+
+/* Tablets sc < 992 px */
+@media (width < 992px) {
+  .container {
+    grid-template-areas:
+      "h1 h1 "
+      " header header"
+      "banner banner "
+      "o1 o2"
+      "side side"
+      "main main"
+      "r t"
+      "f f";
+  }
+}
 /* Phones sc < 550 px */
+@media (max-width: 550px) {
+  .container {
+    grid-template-areas:
+      "h1"
+      "header"
+      "banner "
+      "o1"
+      "o2"
+      "side"
+      "main"
+      "r"
+      "t"
+      "f";
+  }
+}
