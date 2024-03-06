@@ -16,7 +16,79 @@ body {
 
   display: grid;
   gap: 10px;
-}
-/* Tablets sc < 992 px */
 
+  grid-template-areas:
+    "i1 i1"
+    "i2 i2"
+    "i3 i4"
+    "i3 i5"
+    "i6 i9"
+    "i7 i9"
+    "i8 i9"
+    "i10 i10";
+}
+.itm1 {
+  grid-area: i1;
+  background: blue !important;
+  margin: 20px 0 10px 0;
+}
+.itm2 {
+  grid-area: i2;
+}
+.itm3 {
+  grid-area: i3;
+}
+.itm4 {
+  grid-area: i4;
+}
+.itm5 {
+  grid-area: i5;
+}
+.itm6 {
+  grid-area: i6;
+}
+.itm7 {
+  grid-area: i7;
+}
+.itm8 {
+  grid-area: i8;
+}
+.itm9 {
+  grid-area: i9;
+}
+.itm10 {
+  grid-area: i10;
+  background: black !important;
+  padding: 10px 0;
+}
+
+/* Tablets sc < 992 px */
+@media (width <992px) {
+  .container {
+    grid-template-areas:
+      "i1 i1"
+      "i2 i2"
+      "i3 i3"
+      "i4 i5"
+      "i6 i6"
+      "i9 i9"
+      "i7 i8"
+      "i10 i10";
+  }
+}
 /* Phones sc < 550 px */
+@media (max-width: 550px) {
+  .container {
+    grid-template-areas:
+      "i1"
+      "i2"
+      "i3"
+      "i4"
+      "i5"
+      "i6"
+      "i9"
+      "i8"
+      "i7"
+      "i10";
+  }
+}
