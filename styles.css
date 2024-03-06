@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background: radial-gradient(
+    145 deg,
+    rgba(48, 48, 145, 0.473),
+    rgba(30, 116, 30, 0.432)
+  );
 }
 
 * {
@@ -10,11 +15,18 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container {
   display: grid;
+
   gap: 5px;
   grid-template-areas:
     "h1 h1 h1"
@@ -27,44 +39,37 @@ body {
     "f f f";
 }
 h1 {
-  background-color: blue;
-  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(20, 20, 158, 0.582),
+    rgba(25, 138, 49, 0.808)
+  );
+
   grid-area: h1;
 }
 header {
-  background: brown;
-  color: white;
   grid-area: header;
 }
 
 .banner {
-  background: linear-gradient(135deg, red, blue);
-  min-height: 20vh;
   grid-area: banner;
 }
 .off1 {
-  background: yellow;
   grid-area: o1;
 }
 .off2 {
-  background: green;
   grid-area: o2;
 }
 .side-menu {
-  background: skyblue;
   grid-area: side;
 }
 .recent {
-  background: greenyellow;
   grid-area: r;
 }
 .tags {
-  background: rebeccapurple;
   grid-area: t;
 }
 .main {
-  height: 30vh;
-  background: radial-gradient(purple, red, green);
   grid-area: main;
 }
 footer {
